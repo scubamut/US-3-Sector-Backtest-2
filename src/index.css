@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+/* Theme Overrides for Light Mode */
+.light {
+  color-scheme: light;
+  
+  /* Redefining Tailwind v4 slate scale to transform dark colors to light, and vice versa */
+  --color-slate-950: #f8fafc; /* Lightest gray for input fields, panel backdrops */
+  --color-slate-900: #ffffff; /* Card backgrounds, clean white */
+  --color-slate-850: #e2e8f0; /* Intermediate gray border */
+  --color-slate-800: #e2e8f0; /* Standard light borders, inactive tabs */
+  --color-slate-750: #f1f5f9; /* Hover card state */
+  --color-slate-700: #cbd5e1; /* Accent borders */
+  --color-slate-600: #64748b; /* Muted titles and labels */
+  --color-slate-500: #475569; /* Medium descriptions, subtexts */
+  --color-slate-400: #334155; /* Normal text */
+  --color-slate-300: #1e293b; /* Secondary text */
+  --color-slate-200: #0f172a; /* Headings and key highlights */
+  --color-slate-100: #020617; /* Main text / strong titles */
+  --color-slate-50: #020617;  /* High-contrast labels */
+
+  /* Override text-white where used in headings or text fields to avoid white text on white bg */
+  h1.text-white,
+  h2.text-white,
+  h3.text-white,
+  h4.text-white,
+  span.text-white,
+  div.text-white,
+  strong.text-white,
+  th.text-white,
+  td.text-white,
+  .text-white {
+    color: #0f172a !important;
+  }
+
+  /* Keep white text on active buttons, badges or areas with primary color backgrounds */
+  .bg-blue-600,
+  .bg-blue-500,
+  .bg-emerald-500,
+  .bg-rose-600,
+  .bg-rose-500,
+  .bg-blue-600\/20,
+  .shadow-blue-500\/20 {
+    &, & *, & h1, & h2, & h3, & h4, & span, & strong, & div, & button {
+      color: #ffffff !important;
+    }
+  }
+
+  /* Handle specific transparent overlays beautifully */
+  .bg-slate-900\/50 {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    border-color: #cbd5e1 !important;
+  }
+
+  .bg-slate-950\/45 {
+    background-color: #f1f5f9 !important;
+  }
+
+  /* Ensure all inputs and selects look stunning in light mode */
+  input[type="number"],
+  input[type="date"],
+  select {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    border-color: #cbd5e1 !important;
+  }
+  input[type="number"]:disabled,
+  input[type="date"]:disabled,
+  select:disabled {
+    background-color: #f1f5f9 !important;
+    color: #94a3b8 !important;
+    border-color: #e2e8f0 !important;
+  }
+}

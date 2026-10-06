@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Sector ETF Portfolio Backtester",
+  "description": "An interactive web tool to select a 3-ETF sector portfolio, run backtesting with individual fees and Dollar Cost Averaging (DCA), generate dynamic cumulative returns, and get automated Python Colab script options.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
